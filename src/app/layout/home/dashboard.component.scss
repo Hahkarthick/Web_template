@@ -1,0 +1,198 @@
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 30%;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  font-weight: 700;
+  background-color: #d2381eb0;
+  border-radius: 10px;
+}
+.read-more-btn{
+  border: solid 1px #d2381e;
+  background: #d2381e;
+}
+.blog .carousel-indicators {
+	left: 0;
+	top: auto;
+  bottom: -40px;
+}
+
+.multi-carousel{
+  margin: 50px 0px;
+  background-color: #d2381eb0;
+  background: url('/src/assets/images/slider1.jpg');
+  .carousel-item{
+    text-align: -webkit-center;
+    text-align: -moz-center;
+  }
+}
+
+/* The colour of the indicators */
+.blog .carousel-indicators li {
+    background: #a3a3a3;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+}
+
+.blog .carousel-indicators .active {
+background: #707070;
+}
+/* Posts css */
+.posts-container{
+  padding: 2%;  
+}
+.img-responsive{
+  max-width: 100%;
+}
+.post-cont{
+  margin:10px 0px;
+}
+.post
+{
+    background-color: #FFF;
+    overflow: hidden;
+    box-shadow: 0 0 1px #CCC;
+}
+.post img
+{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+}
+.post .content
+{
+    padding: 15px;
+}
+.post .author
+{
+    font-size: 11px;
+    color: #737373;
+    padding: 25px 30px 20px;
+}
+.post .post-img-content
+{
+    height: 196px;
+    position: relative;
+}
+.post .post-img-content img
+{
+    position: absolute;
+}
+.post .post-title
+{
+    display: table-cell;
+    vertical-align: bottom;
+    z-index: 2;
+    position: relative;
+}
+.post .post-title b
+{
+    background-color: rgba(51, 51, 51, 0.58);
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #FFF;
+    padding: 10px 15px;
+    margin-top: 5px;
+}
+/* Slider animation css */
+.carousel-caption {
+
+  .post-likes,
+  .post-cmnts {
+    margin: 10px 10px;
+    span{
+      padding: 0px 10px;
+    }
+  }
+
+  .item-1,
+  .item-2,
+  .item-3 {
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+  }
+
+  .item-1 {
+    animation-duration: 10s;
+    animation-name: anim-1;
+  }
+
+  .item-2 {
+    animation-name: anim-2;
+    animation-duration: 5s;
+  }
+
+  .item-3 {
+    animation-name: anim-3;
+    animation-duration: 5s;
+  }
+}
+
+@keyframes anim-1 {
+
+  0%,
+  8.3% {
+    left: -100%;
+    opacity: 0;
+  }
+
+  8.3%,
+  25% {
+    left: 25%;
+    opacity: 1;
+  }
+
+  33.33%,
+  100% {
+    left: 110%;
+    opacity: 1;
+  }
+}
+
+@keyframes anim-2 {
+
+  0%,
+  33.33% {
+    left: -100%;
+    opacity: 0;
+  }
+
+  41.63%,
+  58.29% {
+    left: 25%;
+    opacity: 1;
+  }
+
+  66.66%,
+  100% {
+    left: 110%;
+    opacity: 1;
+  }
+}
+
+@keyframes anim-3 {
+
+  0%,
+  66.66% {
+    left: -100%;
+    opacity: 0;
+  }
+
+  74.96%,
+  91.62% {
+    left: 25%;
+    opacity: 1;
+  }
+
+  100% {
+    left: 110%;
+    opacity: 1;
+  }
+}

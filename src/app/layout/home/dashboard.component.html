@@ -1,0 +1,193 @@
+<div [@routerTransition]>
+  <div class="row">
+    <div class="col-md-12">
+      <!-- Slider -->
+      <ngb-carousel>
+        <ng-template ngbSlide *ngFor="let slider of sliders">
+          <img class="img-fluid mx-auto d-block" [src]="slider.imagePath" alt="Random first slide" width="100%">
+          <div class="carousel-caption">
+            <h3 class="post-heading item-1">{{slider.label}}</h3>
+            <p class="post-description item-2">{{slider.text}}</p>
+            <p class="item-3">
+              <span class="post-likes fa fa-heart" aria-hidden="true">
+                <span>{{slider.post_likes}}</span>
+              </span>
+              <span class="post-cmnts fa fa-comments-o" aria-hidden="true">
+                <span>{{slider.post_comments}}</span>
+              </span>
+            </p>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+  </div>
+  <!-- Blog Posts -->
+  <div class="row posts-container">
+    <div class="col-lg-8 col-md-8 ">
+      <h3 class="heading">Our Recent Posts</h3>
+      <div class="row">
+        <div class="col-md-6 col-sm-12 post-cont" *ngFor="let post of posts">
+          <div class="post">
+            <div class="post-img-content">
+              <img [src]="post.post_image" class="img-responsive" />
+              <span class="post-title"><b>{{post.post_title}}</b></span>
+            </div>
+            <div class="content">
+              <div class="author">
+                <time>{{post.post_datetime}}</time>
+              </div>
+              <div class="post_desc">
+                {{post.post_desc}}
+              </div>
+              <div>
+                <a href="" class="btn btn-danger read-more-btn btn-sm">Read
+                  more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <h3 class="heading">Latest Videos</h3>
+      <iframe id="ytplayer" type="text/html" width="100%" height="280" src="https://www.youtube.com/embed/4_jVjP1bm80?autoplay=0&origin=http://example.com"
+        frameborder="0"></iframe>
+      <iframe id="ytplayer" type="text/html" width="100%" height="280" src="https://www.youtube.com/embed/4_jVjP1bm80?autoplay=0&origin=http://example.com"
+        frameborder="0"></iframe>
+      <iframe id="ytplayer" type="text/html" width="100%" height="280" src="https://www.youtube.com/embed/4_jVjP1bm80?autoplay=0&origin=http://example.com"
+        frameborder="0"></iframe>
+    </div>
+    <div id="blogCarousel" class="carousel multi-carousel slide col-md-12 d-none" data-ride="carousel">
+
+      <ol class="carousel-indicators">
+        <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#blogCarousel" data-slide-to="1"></li>
+      </ol>
+
+      <!-- Carousel items -->
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-6">
+              <a href="#">
+                <img src="http://placehold.it/460x250/d2381e/ffffff&text=Image" alt="Image" style="max-width:100%;">
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+              <a href="#">
+                <img src="http://placehold.it/460x250/d2381e/ffffff&text=Image" alt="Image" style="max-width:100%;">
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+              <a href="#">
+                <img src="http://placehold.it/460x250/d2381e/ffffff&text=Image" alt="Image" style="max-width:100%;">
+              </a>
+            </div>
+          </div>
+          <!--.row-->
+        </div>
+        <!--.item-->
+
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-6">
+              <a href="#">
+                <img src="http://placehold.it/460x250/d2381e/ffffff&text=Image" alt="Image" style="max-width:100%;">
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+              <a href="#">
+                <img src="http://placehold.it/460x250/d2381e/ffffff&text=Image" alt="Image" style="max-width:100%;">
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-6">
+              <a href="#">
+                <img src="http://placehold.it/460x250/d2381e/ffffff&text=Image" alt="Image" style="max-width:100%;">
+              </a>
+            </div>
+          </div>
+          <!--.row-->
+        </div>
+        <!--.item-->
+
+      </div>
+      <!--.carousel-inner-->
+    </div>
+    <h3 class="heading">Treanding Posts</h3>
+    <div class="row p-2">
+      <div class="col-sm-6 contpost">
+        <div class="row">
+          <div class="col PostTitle">
+            <h4><a href="#">Title of the post</a></h4>
+            <div class="PostDate"><i class="fa fa-calendar"></i> Sept 8, 2017</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <a href="#" class="thumbnail">
+              <img src="http://placehold.it/260x180" alt="">
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              Una descripción breve para decirle al usuario que es lo que contiene el post!
+            </p>
+            <p><a class="btn btn-sm btn-success" href="#">Leer más</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center small p-2">
+            <p>
+              <i class="fa fa-user-circle"></i> by <a href="#">Miguel92</a>
+              | <i class="fa fa-comment"></i> <a href="#">3 Comments</a>
+              | <i class="fa fa-share"></i> <a href="#">39 Shares</a>
+              | <i class="fa fa-tags"></i> Tags : <a href="#"><span class="badge badge-info">Snipp</span></a>
+              <a href="#"><span class="badge badge-info">Bootstrap</span></a>
+              <a href="#"><span class="badge badge-info">UI</span></a>
+              <a href="#"><span class="badge badge-info">growth</span></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-6 contpost">
+        <div class="row">
+          <div class="col PostTitle">
+            <h4><a href="#">Title of the post</a></h4>
+            <div class="PostDate"><i class="fa fa-calendar"></i> Sept 7, 2017</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <a href="#" class="thumbnail">
+              <img src="http://placehold.it/260x180" alt="">
+            </a>
+          </div>
+          <div class="col-sm-6">
+            <p>
+              Una descripción breve para decirle al usuario que es lo que contiene el post!
+            </p>
+            <p><a class="btn btn-sm btn-success" href="#">Leer más</a></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center small p-2">
+            <p>
+              <i class="fa fa-user-circle"></i> by <a href="#">Miguel92</a>
+              | <i class="fa fa-comment"></i> <a href="#">3 Comments</a>
+              | <i class="fa fa-share"></i> <a href="#">39 Shares</a>
+              | <i class="fa fa-tags"></i> Tags : <a href="#"><span class="badge badge-info">Snipp</span></a>
+              <a href="#"><span class="badge badge-info">Bootstrap</span></a>
+              <a href="#"><span class="badge badge-info">UI</span></a>
+              <a href="#"><span class="badge badge-info">growth</span></a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<!-- Modal -->

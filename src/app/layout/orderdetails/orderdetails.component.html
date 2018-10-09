@@ -1,0 +1,34 @@
+<div>
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" id="printCont">
+        <h2 class="text-center">Order Details</h2>
+        <table class="table table-condensed order-detail-table">
+            <tbody *ngFor="let order of orderDetail">
+                <tr>
+                    <td>Order No:</td>
+                    <td>{{order.orderId}}</td>
+                    <td>Ordered Data:</td>
+                    <td>{{order.dateofbooking}}</td>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td>UserName</td>
+                    <td>User ID:</td>
+                    <td>{{order.user_id}}</td>
+                </tr>
+                <tr>
+                    <td>Price:</td>
+                    <td>{{order.price}}</td>
+                    <td>Discount:</td>
+                    <td>{{order.discount_amount}}</td>
+                </tr>
+                <tr>
+                    <td>No Of Items:</td>
+                    <td>{{order.number_of_items}}</td>
+                    <td>Quantity:</td>
+                    <td>{{order.quantity}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-info" id="print" (click)="print()">Print</button>
+    </div>
+</div>
